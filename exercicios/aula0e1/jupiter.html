@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupiter</title>
+    <style> 
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #div1 {
+            display: flex;
+            flex-direction: row;
+            gap: 5vw;
+            width: 100%;
+        }
+
+        .classe1 {
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        #linhas{
+            background-color:#1094ab;
+            height: 3vh;
+        }
+
+        header{
+           background-color: #fcb421;
+           padding-top: 1vh;
+           padding-left: 1vh;
+           padding-bottom: 1vh;
+        }
+
+        #form-div {
+            width: 1400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form {
+            width: 30vh;
+        }
+
+        nav a:hover {
+            background-color:#fcb421;
+        }
+
+        nav a{
+            background-color: #1094ab;
+            margin: 3px;
+            padding: 0.1vh;
+            transition: 0.5s;
+
+            width: 30vh;
+            text-align: center;
+            border-radius: 20em;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav div{
+            background-color:#fcb421;
+            margin: 3px;
+            padding: 0.1vh;
+            transition: 0.5s;
+
+            width: 30vh;
+            text-align: center;
+            color: white;
+        }
+
+        footer{
+            /*display: flex;
+            flex-direction: column;*/
+            bottom: 0px;
+            position:fixed; 
+            background-color:#fcb421;
+            width: 100%;
+            height: 5vh;
+
+            text-align: center;
+            
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <img src="https://www5.usp.br/wp-content/uploads/usp-2018.png?x52799">
+       
+    </header>
+    <div id="linhas">
+
+    </div>
+
+    <div id="div1">
+        <nav class="classe1">
+            <div>Público</div>
+
+            <a  href="https://uspdigital.usp.br/jupiterweb/jupArquivosPublicos.jsp?tiparq=9&anoprg=2026&codmnu=6863">Calendário Escolar</a>
+            <a href="https://uspdigital.usp.br/jupiterweb/jupCarreira.jsp?codmnu=8275">Curso de Ingresso</a>
+            <a href="https://uspdigital.usp.br/jupiterweb/jupDisciplinaBusca?tipo=D&codmnu=6755">Disciplinas</a>
+            <a href="https://uspdigital.usp.br/juno/bnfArquivosPublicos.jsp?tiparq=1&anoprg=2025&codm?codmnu=11502"> Editais</a>
+            <a href="https://uspdigital.usp.br/jupiterweb/FAQ.jsp?codmnu=9326"> FAQ</a>
+
+            <div>Área Restrita</div>
+            <a href="https://uspdigital.usp.br/jupiterweb/webLogin.jsp">Entrar</a>
+            <a href="https://uspdigital.usp.br/jupiterweb/esqueciSenha">Esqueci Senha</a>
+            <a href="https://uspdigital.usp.br/jupiterweb/primeiroAcesso">Primeiro Acesso</a>
+
+
+        </nav>
+        <div id="form-div">
+        <form class="classe1">
+            <label> Usuário</label>
+            <input type="text">
+            <label> Senha</label>
+            <input type="text">
+            <input type="submit" value="Submit">
+        </form>
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://uspdigital.usp.br/jupiterweb/creditos.jsp"> Créditos</a> |
+        <a href="https://uspdigital.usp.br/jupiterweb/jupColegiadoEmailLista">Fale Conosco</a>
+        <div>© 1999 - 2026 - Superintendência de Tecnologia da Informação/USP</div>
+    </footer>
+
+    
+</body>
+</html>
