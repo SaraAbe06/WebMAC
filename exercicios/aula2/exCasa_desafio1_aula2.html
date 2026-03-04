@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Desafio 1</title>
+        <style>
+            .centre {
+                text-align: center;
+            }
+            body{
+                background-color: black;
+                color: white;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="centre">
+            <h1 id="texto1">A luz está APAGADA</h1>
+            <button onclick="alternarLuz()">Interruptor</button>
+            <script>
+                function alternarLuz(){
+                    const texto_atual=document.querySelector('h1');
+                    if(texto_atual.innerHTML==='A luz está APAGADA'){
+                        texto_atual.innerHTML='A luz está ACESA';
+                        document.body.style.backgroundColor='white';
+                        document.getElementById('texto1').style.color='black';
+
+                    }
+                    else{
+                        texto_atual.innerHTML='A luz está APAGADA';
+                        document.body.style.backgroundColor='black';
+                        document.getElementById('texto1').style.color='white';
+
+                    }
+                }
+            </script>
+        </div>
+       
+    </body>
+</html>
