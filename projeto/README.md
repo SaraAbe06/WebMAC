@@ -7,7 +7,7 @@ Neste projeto será implementado um Web App para ranquear seus livros favoritos.
 - Ranquear livros pela nota
 - Filtrar os livros pela categoria e apresentá-los em um ranking  
 - Deletar livro que foi adicionado
-- Atualizar nota atribuída ao livro 
+- Atualizar nota ou categoria atribuída ao livro 
 
 ## Autor 
 Sara Miyuka Abe 
