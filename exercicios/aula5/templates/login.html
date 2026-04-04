@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block conteudo %}
+    <h2>Login</h2>
+    <p>Faça o login com nome e senha.</p>
+    <form>
+        <input type="text" id="nome" placeholder="Nome">
+        <br>
+        <input type="text" id="senha" placeholder="Senha">
+        <br>
+        <button type="button" onclick="logarUsuario()">Enviar</button>
+    </form>
+
+    <script>
+        async function logarUsuario() {
+            const dados = {
+                nome: document.getElementById('nome').value,
+                senha: document.getElementById('senha').value,
+                bio: ""
+            };
+
+            const resposta = await fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(dados)
+            });
+
+            if (resposta.ok) {
+                const resultado = await resposta.json();
+                alert(resultado.message);
+                window.location.href = "/home";
+            } else {
+                alert("Erro ao logar!");
+            }
+        }
+    </script>
+{% endblock %}
