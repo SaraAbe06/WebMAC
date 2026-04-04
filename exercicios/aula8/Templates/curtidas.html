@@ -1,0 +1,21 @@
+<div id="visualiza">
+    {{contador.quantidade}}
+</div>
+<br>
+<button hx-post="/curtidas"
+      hx-target="#visualiza"
+      hx-swap="innerHTML">
+      Curtir
+</button>
+<br>
+<button hx-delete="/curtidas"
+      hx-target="#visualiza"
+      hx-swap="innerHTML"
+      hx-confirm="Tem certeza que quer apagar?">
+      Delete tudo
+</button>
+
+<div hx-get="/jupiter"
+     hx-trigger="keyup[shiftKey&&ctrlKey&&altKey&&key=='P'] from:body"
+     >
+</div>

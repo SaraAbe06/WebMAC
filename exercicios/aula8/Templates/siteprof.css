@@ -1,0 +1,60 @@
+ .siteprof body{
+    margin: 0;
+    font-family: 'Roboto',sans-serif;
+    text-decoration: none;
+}
+.siteprof header {
+    
+    top: 0;
+    width: 100%;
+    display: flex;                 
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh;
+    box-sizing: border-box; 
+}
+
+.siteprof .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh;
+    color: black;
+}
+
+.siteprof .menu a{
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 3vh;
+    color: black;
+}
+
+.siteprof .menu a:hover{
+    color:#6495ED;
+}
+
+.siteprof #linhas{
+    background-color:gray;
+    height: 0.5vh;
+}
+
+    .siteprof .img_about{
+    display: flex;
+    
+    align-items: center;
+    padding: 40px;
+    gap: 40px;
+}
+
+.siteprof .img_about img{
+    width: 60vh;
+}
+.siteprof .texto-intro{
+    text-align: left;
+}
+
+.siteprof .nome_page{
+    font-weight: bold;
+    font-size: 24px;
+}

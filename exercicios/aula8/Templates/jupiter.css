@@ -1,0 +1,74 @@
+.jupiter #div1 {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    width: 100%;
+}
+
+.jupiter .classe1 {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.jupiter #linhas{
+    background-color:#1094ab;
+    height: 3vh;
+}
+
+.jupiter header{
+    background-color: #fcb421;
+    padding-top: 1vh;
+    padding-left: 1vh;
+    padding-bottom: 1vh;
+}
+
+.jupiter #form-div {
+    width: 1400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.jupiter   form {
+    width: 30vh;
+}
+
+.jupiter nav a:hover {
+    background-color:#fcb421;
+}
+
+.jupiter nav a{
+    background-color: #1094ab;
+    margin: 3px;
+    padding: 0.1vh;
+    transition: 0.5s;
+
+    width: 30vh;
+    text-align: center;
+    border-radius: 20em;
+    color: white;
+    text-decoration: none;
+}
+
+.jupiter nav div{
+    background-color:#fcb421;
+    margin: 3px;
+    padding: 0.1vh;
+    transition: 0.5s;
+
+    width: 30vh;
+    text-align: center;
+    color: white;
+}
+
+.jupiter footer{
+    
+    bottom: 0px;
+    position:fixed; 
+    background-color:#fcb421;
+    width: 100%;
+    height: 5vh;
+
+    text-align: center;
+    
+}
