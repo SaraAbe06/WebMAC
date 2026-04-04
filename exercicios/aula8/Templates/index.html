@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.js" integrity="sha384-ezjq8118wdwdRMj+nX4bevEi+cDLTbhLAeFF688VK8tPDGeLUe0WoY2MZtSla72F" crossorigin="anonymous"></script>
+        <title>Meu Site</title>
+
+        <link rel="stylesheet" href="/static/siteprof.css">
+        <link rel="stylesheet" href="/static/jupiter.css">
+        <style>
+            .botoes.ativo{
+                background-color: wheat;
+            }
+        </style>
+
+        
+    
+    </head>
+    <body class="fade-out">
+        <h1>Meu Site</h1>
+
+        <nav>
+            <button class="botoes"
+                hx-get="/curtidas"
+                hx-target="main"
+                 hx-push-url="true">
+                Curtidas
+            </button>
+
+            <button class="botoes"
+                     hx-get="/jupiter"
+                hx-target="main"
+                 hx-push-url="true">
+                Jupiter
+            </button>
+
+
+            <button class="botoes"
+               hx-get="/siteprof"
+                hx-target="main"
+                 hx-push-url="true"
+                >
+                Site Professor
+            </button>
+
+
+
+        </nav>
+        <hr >
+        <main hx-get="{{ pagina }}"
+              hx-target="main"
+              hx-trigger="load"
+              hx-push-url="true">
+        </main>
+
+        <script>
+            
+            function funcao1() {
+                const path = window.location.pathname;
+                document.querySelectorAll('.botoes').forEach(botao => {
+                    botao.classList.remove('ativo');
+                    const aux=botao.getAttribute('hx-get');
+                    if(aux==path){
+                        botao.classList.add('ativo');
+                    }
+                });
+            }
+
+            funcao1();
+            document.body.addEventListener('htmx:afterSwap', funcao1);
+            document.body.addEventListener('htmx:afterHistoryRestore', funcao1);
+        
+        </script>
+
+       
+    </body>
+</html>
