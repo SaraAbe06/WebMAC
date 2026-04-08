@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBookshelf</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        header{
+           background-color: #FFDAE9;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+
+           padding-right: 1vh;
+           padding-top: 1vh;
+           padding-left: 1vh;
+           padding-bottom: 1vh;
+           margin: 0;
+
+           height: 7vh;
+
+        }      
+        header h1 {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            font-size: 2.1rem;
+        }
+        .head_botoes button{
+            background-color: #FFDAE9;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.86rem;
+            padding: 1.5vh 2.3vh;
+            border: none;
+
+            border-radius: 10px;
+            cursor:pointer;
+            transition: 0.3s; 
+        }
+
+        .head_botoes button:hover {
+            background-color:#FFB7D5;
+        }
+
+        .classe_main{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 3vh;
+            gap:20vh;
+        }
+
+        .textinho-main{
+            max-width: 400px;
+            font-size: 1.2rem;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .img1{
+            width: 60vh;
+            height: 60vh;
+            border-radius: 50%;
+            object-fit: cover;
+            aspect-ratio: 1/1;
+        }
+        #texto-entrada2{
+            color: gray;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;   
+        }
+        main{
+            flex:1;
+            display: flex;
+            flex-direction: column;
+            min-height: 80vh;   
+            width: 100%;       
+        }
+       
+        main .container1,
+        main .container2,
+        main .container3,
+        main .conteiner4{
+            background-color: #FFE8F4;
+            padding: 2vh;
+            margin: 3vh;
+            border-radius: 15px;
+            
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            gap: 1vh;
+            display: flex;
+            flex-direction: column;
+          
+        }
+
+        main .container1 input[type="text"],
+        main .container1 input[type="number"],
+        main .container2 input[type="text"],
+        main .container3 input[type="text"], 
+        main .container3 input[type="number"],
+        main .conteiner4 input[type="text"]{
+            width: 80%;            
+            padding:1vh 2vh;       
+            font-size: 1rem;
+            
+            border-color: #D4D4D4;
+            border-width: 1px;
+            border-style: solid;
+
+            margin-bottom: 1vh;
+            border-radius: 10px; 
+           
+            outline: none;           
+        }
+         
+        main .container1 button,
+        main .container2 button,
+        main .container3 button,
+        main .conteiner4 button,
+        main .botoes-pag button{
+            background-color: wheat;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            padding: 1.5vh 2.3vh;
+            border: none;
+
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        main .container1 button:hover,
+        main .container2 button:hover,
+        main .container3 button:hover,
+        main .conteiner4 button:hover,
+        main .botoes-pag button:hover  {
+            background-color:#FFB7D5;
+        }
+
+        main .conteiner4 p,
+        main .container3 p,
+        main .container2 p,
+        main .container1 p{
+            color: #827D81;
+        }
+
+        main #lista .num-pag{
+            background-color: #FFDAE9;
+            padding: 1.5vh 2.3vh;
+            border-radius: 10px;
+        }
+
+        main .titulo-rank{
+            padding: 2vh;
+            margin: 3vh;
+            font-size: 1rem;
+            border-radius: 15px;
+            font-family: 'Roboto', sans-serif;
+            gap: 1vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            background-color: wheat;
+        }
+
+        main #lista{
+            display: flex;
+            flex-direction: column;
+            gap: 1vh;
+            align-items: center;
+            justify-content: center;
+            padding: 2vh;
+            width: 95%;
+            
+        }
+
+        main #lista ol{
+            list-style: none; 
+            padding: 0;
+            margin: 0;
+
+            display: flex;
+            flex-direction: column;
+            gap: 1vh;
+            width: 100%;
+
+            align-items: center;
+            
+        }
+
+        main #lista .item{
+            background-color: wheat; 
+            padding: 1.5vh 2.3vh;
+            font-family: 'Roboto', 'sans-serif';
+            font-size: 1.1rem;
+            border-radius: 10px;
+            width: 95%;
+            text-align: center;
+
+            display: grid;
+            grid-template-columns: 1fr 3fr 2fr 1fr; 
+            
+            gap: 3vh;
+        }
+       
+        main #lista .numero-item{
+            background: white;
+            border-radius: 10px; 
+            padding: 1.5vh 2.3vh;
+            font-weight: bold;
+        }
+
+        main #lista .conteudo-item{
+            display: flex;
+            align-items: center;
+        }
+
+        main #lista .nota-item{
+            background: white;
+            border-radius: 10px; 
+            padding: 1.5vh 2.3vh;
+            font-weight: bold;
+        }
+
+        main .legenda-rank{
+            background-color: #FFDAE9;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 1.5vh 2.3vh;
+
+            display: grid;
+            grid-template-columns: 1fr 3fr 2fr 1fr;  
+          
+            border-radius: 10px;
+            width: 95%;
+
+            gap: 3vh;
+            text-align: center;
+        }
+
+        main .botoes-pag{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 3vh;
+
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            width: 80vw;
+            
+            padding-bottom: 2vh;
+        }
+
+        .barra-navegacao{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #mensagem-erro{
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.1rem;
+            background-color: wheat; 
+            border-radius: 10px;
+            padding: 1.5vh 2.3vh;
+
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: auto;
+                gap: 10px;
+            }
+
+            .head_botoes {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .head_botoes button {
+                width: 90%;
+            }
+
+            .img1{
+                width: 40vh;
+                border-radius: 50%;
+                object-fit: cover;
+                aspect-ratio: 1/1;
+            }
+             
+
+            .classe_main {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .textinho-main{
+                font-size: 0.9rem;
+            }
+
+            main .container1,
+            main .container2,
+            main .container3,
+            main .conteiner4{
+                font-size: 0.9rem;
+            }
+
+            main .container1 input[type="text"],
+            main .container1 input[type="number"],
+            main .container2 input[type="text"],
+            main .container3 input[type="text"], 
+            main .container3 input[type="number"],
+            main .conteiner4 input[type="text"]{    
+                font-size: 0.9rem;
+            }
+
+            main .container1 button,
+            main .container2 button,
+            main .container3 button,
+            main .conteiner4 button,
+            main .botoes-pag button{ 
+                font-size: 0.9rem;
+            }
+
+            main .titulo-rank{
+                font-size:0.9rem;
+            }
+
+            main #lista .item{
+
+                font-size: 0.9rem;
+               
+            }
+
+            main .legenda-rank{
+                font-size: 0.9rem;
+            }
+
+            main .botoes-pag{
+                font-size: 0.9rem;
+            }
+
+            #mensagem-erro{
+                font-size: 0.9rem;
+            }
+            
+        }
+
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.js" integrity="sha384-ezjq8118wdwdRMj+nX4bevEi+cDLTbhLAeFF688VK8tPDGeLUe0WoY2MZtSla72F" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="barra-navegacao">
+        <h1>MyBookshelf</h1>
+        <div class="head_botoes">
+            <button hx-get="/home"
+                    hx-target="main"
+                    hx-push-url="true"
+                    >HOME</button>
+            <button hx-get="/AdicionarLivro"
+                    hx-target="main"
+                    hx-push-url="true"
+                    >ADICIONAR</button>
+            <button hx-get="/DeletarLivro"
+                    hx-target="main"
+                    hx-push-url="true"
+            >DELETAR</button>
+            <button  hx-get="/AtualizarLivro"
+                    hx-target="main"
+                    hx-push-url="true"
+            >ATUALIZAR</button>
+            <button hx-get="/Rank"
+                    hx-target="main"
+                    hx-push-url="true"
+            >RANK</button>
+        </div>
+    </header>
+
+    <main hx-get="{{ pagina }}"
+              hx-target="main"
+              hx-trigger="load"
+              hx-push-url="true"
+              >
+        <div class="classe_main">
+            <img src="https://i.pinimg.com/1200x/61/4b/f0/614bf0dbb5646b113aec889b8eb8d4ae.jpg" class="img1">
+            <div class="textinho-main">
+                <h2 id="texto-entrada">Bem-Vindo ao MyBookshelf! </h2>
+                <p id="texto-entrada2">Sua biblioteca pessoal em um só lugar! Organize seus livros por Nome, Autor e Nota.</p>
+            </div>
+        
+        </div>
+    </main>
+    
+
+    
+</body>
+</html>
