@@ -7,7 +7,10 @@ Neste projeto será implementado um Web App para ranquear seus livros favoritos.
 - Ranquear livros pela nota
 - Filtrar os livros pelo autor e/ou nome do livro e apresentá-los em um ranking  
 - Deletar livro que foi adicionado
-- Atualizar nota atribuída ao livro 
+- Atualizar nota atribuída ao livro
+
+## Uso de IA 
+O uso foi feito para auxiliar no desenvolvimento do front-end, principalmente para deixar elementos com formatos específicos, que estavam ficando estranhos ao dimunuir a área da tela, e arrumar o grid para o rank.
 
 ## Autor 
 Sara Miyuka Abe 
