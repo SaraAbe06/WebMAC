@@ -1,0 +1,21 @@
+<div class="container3">
+    <h2>Atualize a nota do seu livro!</h2>
+    <br>
+    <p>Para atualizar a nota do livro digite o nome e autor do livro e sua nova nota. Lembre-se que a nota é de 0 a 5 com intervalos de 0.5!</p>
+    <br>
+    <form hx-put="/AtualizaLivro"
+          hx-target="#mensagem-atualiza-livro"
+          hx-swap="beforeend"
+          >
+    <input type="text" name="nome" placeholder="Nome do Livro" required>
+    <br>
+    <input type="text" name="nome_autor" placeholder="Nome do autor" required>
+    <br>
+    <input type="number" name="nova_nota" min=0 max=5 step=0.5 placeholder="Nova nota do livro" required>
+    <br>
+    <button type="submit">Atualizar</button>
+    </form>
+
+    <br>
+    <div id="mensagem-atualiza-livro"></div>
+</div>

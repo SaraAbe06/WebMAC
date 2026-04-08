@@ -1,0 +1,69 @@
+<div class="tudo">
+
+    <div class="titulo-rank">
+        <h1>Rank</h1>
+    </div>
+
+    <div class="conteiner4">
+        <h2>Filtros</h2>
+        <br>
+        <p>Filtre pelo nome e/ou autor do livro</p>
+        <form hx-get="/Rank"
+        hx-target=".tudo"
+        hx-select=".tudo"
+        hx-trigger="submit">
+
+        <input type="text" name="nome_livro" placeholder="Nome do Livro">
+        <br>
+        <input type="text" name="nome_autor" placeholder="Nome do Autor">
+        <br>
+        <button type="submit">Filtrar</button>
+        </form>
+
+    </div>
+
+
+    <div id="lista">
+        <div class="legenda-rank">
+            <div>Posição</div>
+            <div>Título</div>
+            <div>Autor</div>
+            <div>Nota</div>
+        </div>
+        <ol>
+            {% for livro,autor in livros %}
+                <li class="item"> 
+                    <div class="numero-item">{{loop.index + (page-1)*10 }}</div>
+                    <div class="conteudo-item"> {{ livro.nome }}</div>
+                    <div class="conteudo-item"> {{ autor.nome }} </div>
+                    <div class="nota-item"> {{livro.nota}}</div>
+                </li>
+            {% endfor %}
+        </ol>
+
+        {% if not livros%}
+        <p id="mensagem-erro">Não há livros</p>
+        {% endif %}
+        
+        <div class="botoes-pag">
+            {% if page > 1 %}
+            <button 
+                hx-get="/Rank?page={{page-1}}{% if nome_livro %}&nome_livro={{nome_livro}}{% endif %}{% if nome_autor %}&nome_autor={{nome_autor}}{% endif %}"
+                hx-target="main">
+                Anterior
+            </button>
+            {% endif %}
+
+            <div class="num-pag">Página {{page}}</div>
+
+            {% if flag_proxima %}
+            <button 
+                hx-get="/Rank?flag_proxima={{flag_proxima}}&page={{page+1}}{% if nome_livro %}&nome_livro={{nome_livro}}{% endif %}{% if nome_autor %}&nome_autor={{nome_autor}}{% endif %}"
+                hx-target="main">
+                Próxima
+            </button>
+            {% endif %}
+        </div>
+    </div>
+
+</div>

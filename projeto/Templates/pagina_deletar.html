@@ -1,0 +1,18 @@
+<div class="container2">
+    <h2>Deletar Livros</h2>
+    <br>
+    <p>Para deletar o livro digite o nome e autor do livro!</p>
+    <br>
+    <form  hx-delete="/DeletarLivro"
+           hx-target="#mensagem-delete-livro"
+           hx-swap="innerHTML">
+    <input type="text" name="nome" placeholder="Nome do Livro" required>
+    <br>
+    <input type="text" name="nome_autor" placeholder="Nome do Autor" required>
+    <br>
+
+    <button type="submit">Deletar</button>
+    </form>
+    <br>
+    <div id="mensagem-delete-livro"></div>
+</div>
